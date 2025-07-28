@@ -1,34 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Blog preview card</title>
+    <title>Frontend Mentor | Blog preview card</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Learning
-
-  Published 21 Dec 2023
-
-  HTML & CSS foundations
-
-  These languages are the backbone of every website, defining structure, content, and presentation.
-
-  Greg Hooper
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        /* fonts */
+        --font-family: "Figtree", sans-serif;
+        --font-weight-Regular-500: 500;
+        --font-weight-ExtraBol-800: 800;
+        --font-size: 16px;
+        /*color*/
+        --Yellow: hsl(47, 88%, 63%);
+        --White: hsl(0, 0%, 100%);
+        --Grey: hsl(0, 0%, 50%);
+        --Black: hsl(0, 0%, 7%);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-size: var(--font-size);
+        font-family: var(--font-family);
+        background-color: var(--Yellow);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      .card {
+        width: 384px;
+        height: 522px;
+        background-color: var(--White);
+        border-radius: 20px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        border: 1px;
+        border-color: #000;
+        box-shadow: 13px 11px 0px -2px rgba(0, 0, 0, 1);
+      }
+      .card-img {
+        text-align: center;
+        border-radius: 20px;
+        background-color: pink;
+        overflow: hidden;
+      }
+      .card-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .card-text {
+        margin: 24px 0px 24px 0px;
+      }
+      .card-category {
+        background-color: var(--Yellow);
+        padding: 4px 12px 4px 12px;
+        border-radius: 4px;
+        font-size: 16px;
+        display: inline-block;
+        font-weight: var(--font-weight-ExtraBol-800);
+      }
+      .card-publish {
+        font-weight: var(--font-weight-Regular-500);
+        margin-top: 12px;
+        font-size: 14px;
+      }
+      .card-title {
+        margin-top: 12px;
+        font-size: 24px;
+        font-weight: var(--font-weight-ExtraBol-800);
+        margin-bottom: 12px;
+        color: var(--Black);
+      }
+      .card-description {
+        margin-top: 12px;
+        font-size: 16px;
+        color: var(--Grey);
+        margin-bottom: 16px;
+        line-height: 1.6;
+      }
+      .card-profile {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .card-profile-img {
+        width: 48px;
+        height: 48px;
+        background-color: var(--Black);
+        border-radius: 100%;
+        object-fit: cover;
+      }
+      .card-profile-name {
+        font-weight: var(--font-weight-ExtraBol-800);
+        color: var(--Black);
+        font-size: 16px;
+        text-align: center;
+        margin-left: 12px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <div class="card-img">
+        <img src="./assets/images/illustration-article.svg" alt="card-img" />
+      </div>
+      <div class="card-text">
+        <p class="card-category">Learning</p>
+        <h5 class="card-publish">Published 21 Dec 2023</h5>
+        <h2 class="card-title">HTML & CSS foundations</h2>
+        <p class="card-description">
+          These languages are the backbone of every website, defining structure,
+          content, and presentation.
+        </p>
+      </div>
+      <div class="card-profile">
+        <img
+          src="./assets/images/image-avatar.webp"
+          alt="card-img"
+          class="card-profile-img"
+        />
+        <p class="card-profile-name">John Doe</p>
+      </div>
+    </main>
+  </body>
 </html>
